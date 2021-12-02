@@ -1,0 +1,52 @@
+#baner{
+background-color: #63b03c;
+color:white;
+font-size: 300%;
+font-variant-caps: small-caps;
+text-align: center;
+clear:both;
+font-family: Arial;
+}
+
+#lewy{
+width: 20%;
+height:500px;
+background-color: #63b03c;
+color:white;
+float:left;
+}
+#prawy{
+width: 80%; 
+height: 461px;
+}
+
+#stopka{
+background-color: #63b03c;
+color:white;
+text-align: center;
+}
+
+a:link, a:visited {
+color:white;
+}
+
+ul{
+list-style-type: square;
+}
+
+button{
+width: fit-content;
+height:fit-content;
+}
+p{
+    display: inline-block;
+}
+img{
+    display: none;
+}
+.kol:hover ~ .kolo{
+display: block !important;
+}
+.kwad:hover ~ .kwadrat{
+display: block !important;
+}

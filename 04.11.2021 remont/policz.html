@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remonty mieszkań</title>
+    <link rel="stylesheet" href="remont.css">
+</head>
+<body>
+    <div id="menu1">
+        <img src="logotyp.png">
+    </div>
+    <div id="menu2">
+        <a href="index.html">O FIRMIE</a>
+    </div>
+    <div id="menu3">
+        <a href="adres.html">ADRES</a>
+    </div>
+    <div id="menu4">
+        <a href="policz.html">POLICZ</a>
+    </div>
+    <div id="menu5">
+        <a href="http://www.jakremontowac.pl/" target="_blank">LINKI</a>
+    </div>
+    <div id="glowny">
+        <h1>Kafelkowanie łazienki</h1>
+        
+        <label for="pol">powierzchnia w m2:</label>
+            <input type="number" id="pol"> <br><br>
+            <input type="radio" name="plyt" value="70">Płytki 20 x 20 cm <br>
+            <input type="radio" name="plyt" value="80">Płytki 25 x 12 cm <br><br>
+            <button onclick="oblicz()">
+                PRZELICZ
+            </button>
+        <p></p>
+        <script>
+            function oblicz() {
+                let powie=document.getElementById("pol").value;
+                let plytka = document.getElementsByName("plyt");
+                for (var i=0; i < plytka.length; i++){
+                    if(plytka[i].checked) {
+                        document.querySelector("p").innerHTML="Koszt kafelkowania: "+powie*plytka[i].value+" zł";
+                    }
+                }
+            }
+        </script>
+    </div>
+    <div id="stopka">
+        <p>Autor strony: ZAJĄC</p>
+    </div>
+</body>
+</html>

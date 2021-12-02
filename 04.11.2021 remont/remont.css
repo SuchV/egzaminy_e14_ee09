@@ -1,0 +1,38 @@
+#menu1, #menu2, #menu3, #menu4, #menu5 {
+    background-color: RGB(57,180,107);
+    text-align: center;
+    font-size: 150%;
+    width:20%;
+    height: 220px;
+    float: left
+}
+
+#glowny {
+ height: 300px;
+ clear: both;
+}
+
+#stopka {
+    background-color: RGB(57,180,107);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    clear: both;
+}
+
+a {
+    color:white;
+}
+
+button{
+    background-color: green;
+    border: green solid 1px;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+
+h1 {
+    color: RGB(27,163,82);
+}

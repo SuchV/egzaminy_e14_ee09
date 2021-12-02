@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="wrap">
+    <div id="baner">
+        <a href="index.html">FIGURY GEOMETRYCZNE I MATEMATYCY</a>
+    </div>
+    <div id="lewy">
+            <h3>WYBIERZ FIGURĘ</h3>
+            <ol>
+                <a href="kwadrat.html"><li>Kwadrat</li></a>
+                    <ul>
+                        <li>obwód</li>
+                        <li>pole</li>
+                    </ul>
+                <a href="kolo.html"><li>Koło</li></a>
+                <ul>
+                    <li>obwód</li>
+                    <li>pole</li>
+                </ul>
+            </ol>
+            <a href="baza/matematycy.accdb"><h3>BAZA DANYCH</h3></a>
+    </div>
+    <div id="prawy">
+        <h1>KWADRAT</h1>
+        <form action="*">
+            <label><i>Podaj długość boku:</i></label> <input type="number" id="num1" />
+            <br><br>
+        </form>
+        <button onclick="pole()">licz pole</button>
+        <button onclick="obwod()">licz obwód</button>
+        <br></br>
+        <p id="wynik"></p>
+    </div>
+    <div id="stopka">
+        Strona stworzona przez: ZAJĄC
+    </div>
+</div>
+<script>
+    var ostrzeg = "Należy wpisać wartość liczbową";
+    function pole(){
+        var a = document.getElementById("num1").value;
+        if (a =='')
+        {
+            document.getElementById("wynik").innerHTML=ostrzeg;
+        }
+        else{
+                if(isNaN(a)){
+                    document.getElementById("wynik").innerHTML=ostrzeg;
+                }
+                else{
+                    document.getElementById("wynik").innerHTML= ("P = a<sup>2</sup> = "+(a*a));
+                }
+            }
+    }
+    function obwod(){
+        var a = document.getElementById("num1").value;
+        var p = document.querySelector("p");
+        if (a =='')
+        {
+            document.getElementById("wynik").innerHTML=ostrzeg;
+        }
+        else{
+                if(isNaN(a)){
+                    document.getElementById("wynik").innerHTML=ostrzeg;
+                }
+                else{
+                    document.getElementById("wynik").innerHTML= ("Obw = 4a = "+(4*a));
+                }
+            }
+    }
+</script>
+</body>
+</html>
